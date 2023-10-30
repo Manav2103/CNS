@@ -1,0 +1,80 @@
+To accomplish this task, you'll need to create three files, hash them using different hashing algorithms (SHA-256, SHA-1, and MD5), store the hashes in a hashset file, and then verify the files against the hashset. Here's a step-by-step guide to do this in a Linux environment:
+
+1. Create the three files named test1, test2, and test3. You can create empty files using the touch command:
+
+bash
+touch test1 test2 test3
+
+
+2. Hash the files using the following commands:
+
+For SHA-256:
+bash
+sha256sum test1 test2 test3 > sha256_hashes.txt
+
+
+For SHA-1:
+bash
+sha1sum test1 test2 test3 > sha1_hashes.txt
+
+
+For MD5:
+bash
+md5sum test1 test2 test3 > md5_hashes.txt
+
+
+These commands calculate the hashes of each file and store them in separate text files.
+
+3. You should now have three hash files: sha256_hashes.txt, sha1_hashes.txt, and md5_hashes.txt. The contents of these files will look like this:
+
+
+SHA-256:
+<hash_test1>  test1
+<hash_test2>  test2
+<hash_test3>  test3
+
+SHA-1:
+<hash_test1>  test1
+<hash_test2>  test2
+<hash_test3>  test3
+
+MD5:
+<hash_test1>  test1
+<hash_test2>  test2
+<hash_test3>  test3
+
+
+4. Combine the hashes from all three files into a single hashset file:
+
+bash
+cat sha256_hashes.txt sha1_hashes.txt md5_hashes.txt > hashset.txt
+
+
+5. Display the contents of the hashset.txt file:
+
+bash
+cat hashset.txt
+
+
+The hashset.txt file will contain all the hashes from the three hash files.
+
+6. To audit the files against the hashset, you can use the hashset.txt file to verify the integrity of the files:
+
+For SHA-256:
+bash
+sha256sum -c hashset.txt
+
+
+For SHA-1:
+bash
+sha1sum -c hashset.txt
+
+
+For MD5:
+bash
+md5sum -c hashset.txt
+
+
+These commands will verify if the files have the same hashes as those stored in the hashset.txt file. If the files haven't been tampered with, you'll see "OK" for each file.
+
+This process helps ensure the integrity of your files by comparing their current hashes to the stored hashes in the hashset. If the hashes match, it indicates that the files have not been altered.
