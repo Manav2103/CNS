@@ -1,0 +1,190 @@
+vboxuser@MANAV1:~$ gpg -full-generate-key
+gpg: WARNING: no command supplied.  Trying to guess what you mean ...
+gpg: Go ahead and type your message ...
+ldnsnvjss
+
+sdfsf
+sfsf
+^C
+gpg: signal 2 caught ... exiting
+
+vboxuser@MANAV1:~$ sudo apt-get install gnupg
+[sudo] password for vboxuser: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+gnupg is already the newest version (2.2.27-3ubuntu2.1).
+gnupg set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 86 not upgraded.
+vboxuser@MANAV1:~$ gpg -full-generate-key
+gpg: WARNING: no command supplied.  Trying to guess what you mean ...
+gpg: Go ahead and type your message ...
+^C
+gpg: signal 2 caught ... exiting
+
+vboxuser@MANAV1:~$ sudo su
+root@MANAV1:/home/vboxuser# gpg -full-generate-key
+gpg: directory '/root/.gnupg' created
+gpg: keybox '/root/.gnupg/pubring.kbx' created
+gpg: WARNING: no command supplied.  Trying to guess what you mean ...
+gpg: Go ahead and type your message ...
+^C
+gpg: signal 2 caught ... exiting
+
+root@MANAV1:/home/vboxuser# gpg --gen-key
+gpg (GnuPG) 2.2.27; Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Manav
+Email address: abc@gmail.com
+You selected this USER-ID:
+    "Manav <abc@gmail.com>"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: key 5B08C5E36AD8103E marked as ultimately trusted
+gpg: directory '/root/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/root/.gnupg/openpgp-revocs.d/C044DC838AD8C0CBF0B338B25B08C5E36AD8103E.rev'
+public and secret key created and signed.
+
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      C044DC838AD8C0CBF0B338B25B08C5E36AD8103E
+uid                      Manav <abc@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+root@MANAV1:/home/vboxuser# gpg --gen-key
+gpg (GnuPG) 2.2.27; Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: pratham
+Email address: xyz@gmail.com
+You selected this USER-ID:
+    "pratham <xyz@gmail.com>"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key F076431CEEA5FE95 marked as ultimately trusted
+gpg: revocation certificate stored as '/root/.gnupg/openpgp-revocs.d/865AEAF2D7DB3D0F203AAADFF076431CEEA5FE95.rev'
+public and secret key created and signed.
+
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      865AEAF2D7DB3D0F203AAADFF076431CEEA5FE95
+uid                      pratham <xyz@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+root@MANAV1:/home/vboxuser# gpg --gen-key
+gpg (GnuPG) 2.2.27; Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Manav
+Email address: abc@gmail.com
+You selected this USER-ID:
+    "Manav <abc@gmail.com>"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key 0B802862D50E8BA1 marked as ultimately trusted
+gpg: revocation certificate stored as '/root/.gnupg/openpgp-revocs.d/622FBC953B83171F888239570B802862D50E8BA1.rev'
+public and secret key created and signed.
+
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      622FBC953B83171F888239570B802862D50E8BA1
+uid                      Manav <abc@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+root@MANAV1:/home/vboxuser# gpg --export -a Manav>senderpublickey
+root@MANAV1:/home/vboxuser# gpg --export-secret-key Manav>senderprivatekey
+root@MANAV1:/home/vboxuser# gpg --fingerprint xyz@gmail.com
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   3  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 3u
+gpg: next trustdb check due at 2025-10-29
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      865A EAF2 D7DB 3D0F 203A  AADF F076 431C EEA5 FE95
+uid           [ultimate] pratham <xyz@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+root@MANAV1:/home/vboxuser# gpg --export -a Pratham>receiverpublickey
+root@MANAV1:/home/vboxuser# gpg --import receiverpublickey
+gpg: key F076431CEEA5FE95: "pratham <xyz@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+root@MANAV1:/home/vboxuser# gpg --list-keys
+/root/.gnupg/pubring.kbx
+------------------------
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      C044DC838AD8C0CBF0B338B25B08C5E36AD8103E
+uid           [ultimate] Manav <abc@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      865AEAF2D7DB3D0F203AAADFF076431CEEA5FE95
+uid           [ultimate] pratham <xyz@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      622FBC953B83171F888239570B802862D50E8BA1
+uid           [ultimate] Manav <abc@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+root@MANAV1:/home/vboxuser# gpg --list-keys abc@gmail.com
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      C044DC838AD8C0CBF0B338B25B08C5E36AD8103E
+uid           [ultimate] Manav <abc@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+pub   rsa3072 2023-10-30 [SC] [expires: 2025-10-29]
+      622FBC953B83171F888239570B802862D50E8BA1
+uid           [ultimate] Manav <abc@gmail.com>
+sub   rsa3072 2023-10-30 [E] [expires: 2025-10-29]
+
+root@MANAV1:/home/vboxuser# gpg --encrypt -r abc@gmail.com sample.txt
+gpg: can't open 'sample.txt': No such file or directory
+gpg: sample.txt: encryption failed: No such file or directory
+root@MANAV1:/home/vboxuser# touch sample.txt
+root@MANAV1:/home/vboxuser# gpg --encrypt -r abc@gmail.com sample.txt
+root@MANAV1:/home/vboxuser# gpg --encrypt --sign -armour -r xyz@gmail.com sample.txt
+gpg: mour: skipped: No public key
+gpg: sample.txt: sign+encrypt failed: No public key
+root@MANAV1:/home/vboxuser# gpg --encrypt --sign --armor -r xyz@gmail.com sample.txt
+root@MANAV1:/home/vboxuser# gpg -o decryptedfile -d sample.txt.gpg
+gpg: encrypted with 3072-bit RSA key, ID 70A411A147A72D35, created 2023-10-30
+      "Manav <abc@gmail.com>"
+root@MANAV1:/home/vboxuser# 
